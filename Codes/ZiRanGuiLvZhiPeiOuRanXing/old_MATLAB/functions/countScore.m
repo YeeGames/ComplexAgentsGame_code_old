@@ -1,6 +1,7 @@
 function score = countScore( Pros, player)
 %countScore 此处显示有关此函数的摘要
 %   此处显示详细说明
+
 switch Pros.game
     case 'RandomFly'
         for i=1:Pros.numPlayers

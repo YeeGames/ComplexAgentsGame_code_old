@@ -10,14 +10,17 @@ close all;
 
 
 
+
+
+
 %% set parameters
 Args.game='RandomFly';
 Args.rule='1';
-Args.sizeOfChessboard = 8;
+Args.sizeOfChessboard = 4;
 Args.numPlayers=4;
 Args.visual='yes';
 Args.howManyTimesOfExperiment = 1;
-Args.pauseTime=0.000;
+Args.pauseTime=0.0010;
 
 Args
 
@@ -60,7 +63,7 @@ Pros.numOfPoints=Args.sizeOfChessboard^2;
 
 temp010=(randperm(Pros.numOfPoints)).';
 temp020=Pros.numOfPoints/Args.numPlayers;
-for i=1:Pros.numPlayers
+for i=1:Args.numPlayers
     player(i).pos=[player(i).pos;temp010((i-1)*temp020+1:i*temp020)];
     chessboard.pos(player(i).pos)=player(i).id;
 end
@@ -75,9 +78,9 @@ while isContinueCriterions>0
     isContinueCriterions=1;
     
     % dicing to select players and position at checkboard
-    attacker=randi([1,Pros.numPlayers]);
-    attackPos = randi([1,Pros.sizeOfChessboard],1,2);
-    attackPos=sub2ind([Pros.sizeOfChessboard Pros.sizeOfChessboard],attackPos(1),attackPos(2));
+    attacker=randi([1,Args.numPlayers]);
+    attackPos = randi([1,Args.sizeOfChessboard],1,2);
+    attackPos=sub2ind([Args.sizeOfChessboard Args.sizeOfChessboard],attackPos(1),attackPos(2));
     
     % choose a player change its chessman
     defender=chessboard.pos(attackPos);
@@ -88,10 +91,10 @@ while isContinueCriterions>0
     
     %% visualization
     [ chessboard,Pros ]  = visualizeChessboard(chessboard,player,Pros );
-    %      [ chessboard,Pros ] = visualizeChessboardUpdate( player,attacker,attackPos,chessboard,Args,Pros );    pause(Pros.pauseTime);
+%      [ chessboard,Pros ] = visualizeChessboardUpdate( player,attacker,attackPos,chessboard,Args,Pros );    pause(Args.pauseTime);
     %%
     % stop criterions .game overed when one of a players has died.
-    for i=1:Pros.numPlayers
+    for i=1:Args.numPlayers
         isContinueCriterions=isContinueCriterions.*sum(sum(player(i).pos));
     end
 end
@@ -101,6 +104,7 @@ score = countScore( Args, player);
 
 %% end
 % pause;
+
 
 
 
