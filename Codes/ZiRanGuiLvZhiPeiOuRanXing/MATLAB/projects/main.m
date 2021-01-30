@@ -1,4 +1,4 @@
-%% 说明
+%% about
 % chessboard.pos : show the positions of palyer  at chessboard
 % chessboard.color : show the color at chessboard
 
@@ -14,7 +14,7 @@ close all;
 
 
 %% set parameters
-Args.game='RandomFly';
+Args.game='Balance';
 Args.rule='1';
 Args.sizeOfChessboard = 4;
 Args.numPlayers=4;
@@ -25,13 +25,13 @@ Args.pauseTime=0.0001;
 Args
 
 
-%% 建立数据文件夹
+%% create data folder
 str020=datestr(now,'yyyymmdd');
 folderName020=(str020);
 str025=num2str(Args.howManyTimesOfExperiment);
 folderName025=str025;
-folderParentPath01=('.\results\Export Data');
-folderPath01=([folderParentPath01,'\',folderName020,'\',folderName025]);
+folderParentPath01=('./results/Export Data');
+folderPath01=([folderParentPath01,'/',folderName020,'/',folderName025]);
 sentence015=(['mkdir(''',folderPath01,''');']);
 eval(sentence015);
 clear folderName020 folderName025 str020 str025 folderParentPath01 ...

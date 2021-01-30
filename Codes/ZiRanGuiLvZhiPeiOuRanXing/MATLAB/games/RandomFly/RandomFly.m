@@ -1,4 +1,4 @@
-%% ËµÃ÷
+%% relatly function
 % chessboard.pos : show the positions of palyer  at chessboard
 % chessboard.color : show the color at chessboard
 
@@ -16,30 +16,31 @@ close all;
 %% set parameters
 Args.game='RandomFly';
 Args.rule='1';
-Args.sizeOfChessboard = 64;
+Args.sizeOfChessboard = 12;
 Args.numPlayers=4;
 Args.visual='yes';
 Args.howManyTimesOfExperiment = 1;
-Args.pauseTime=0.001;
+Args.pauseTime=0.000;
 
 Args
 
-
-%% ½¨Á¢Êý¾ÝÎÄ¼þ¼Ð
+% è®¾ç½®é¡¹
+%% parameters
 str020=datestr(now,'yyyymmdd');
 folderName020=(str020);
 str025=num2str(Args.howManyTimesOfExperiment);
 folderName025=str025;
-folderParentPath01=('.\results\Export Data');
-folderPath01=([folderParentPath01,'\',folderName020,'\',folderName025]);
+folderParentPath01=('./results/Export Data');
+folderPath01=([folderParentPath01,'/',folderName020,'/',folderName025]);
 sentence015=(['mkdir(''',folderPath01,''');']);
 eval(sentence015);
 clear folderName020 folderName025 str020 str025 folderParentPath01 ...
     folderPath01 sentence015;
+Pros = Args;
 
 %% set properties
 
-% common properties
+% public properties
 load('./resources/playerColorNames');
 
 for i =1:Args.numPlayers
@@ -69,11 +70,11 @@ end
 clear temp010 temp020;
 
 %% visualization
-[ chessboard,Pros ] = visualizeChessboard(chessboard,player,Args,Pros );
+[ chessboard,Pros ] = visualizeChessboard(chessboard,player,Pros );
 
 %% playing
 isContinueCriterions=1;
-while isContinueCriterions>0;
+while isContinueCriterions>0
     isContinueCriterions=1;
     
     % dicing to select players and position at checkboard
@@ -89,7 +90,7 @@ while isContinueCriterions>0;
     chessboard.pos(attackPos)=player(attacker).id;
     
     %% visualization
-    [ chessboard,Pros ]  = visualizeChessboard(chessboard,player,Args,Pros );
+    [ chessboard,Pros ]  = visualizeChessboard(chessboard,player,Pros );
 %      [ chessboard,Pros ] = visualizeChessboardUpdate( player,attacker,attackPos,chessboard,Args,Pros );    pause(Args.pauseTime);
     %%
     % stop criterions .game overed when one of a players has died.
