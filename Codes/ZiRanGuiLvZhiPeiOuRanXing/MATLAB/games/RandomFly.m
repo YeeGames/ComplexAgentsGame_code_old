@@ -16,11 +16,11 @@ close all;
 %% set parameters
 Args.game='RandomFly';
 Args.rule='1';
-Args.sizeOfChessboard = 12;
+Args.sizeOfChessboard = 8;
 Args.numPlayers=4;
 Args.visual='yes';
 Args.howManyTimesOfExperiment = 1;
-Args.pauseTime=0.000;
+Args.pauseTime=0.0010;
 
 Args
 
