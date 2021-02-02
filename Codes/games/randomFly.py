@@ -7,7 +7,7 @@ class RandomFly():
     '''
 
     '''
-TODO
+    def __init__(self,)
 
 def main(argv):
     '''
