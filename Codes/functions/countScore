@@ -1,0 +1,15 @@
+
+
+class CountScore():
+    '''
+
+
+    '''
+
+    def __init__(self):
+        '''
+        初始化属性
+        '''
+
+
+    def
