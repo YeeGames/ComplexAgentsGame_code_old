@@ -10,9 +10,6 @@ close all;
 
 
 
-
-
-
 %% set parameters
 Args.game='Balance';
 Args.rule='1';
