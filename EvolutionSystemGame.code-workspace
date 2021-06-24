@@ -7,5 +7,7 @@
 			"path": "../../../../Documents/CoreFiles/ProjectsFile/Creation/GameDesign/EvolutionSystemGame"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.fontFamily": "Times, Menlo, Monaco, 'Courier New', monospace"
+	}
 }
