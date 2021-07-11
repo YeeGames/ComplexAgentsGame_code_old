@@ -5,16 +5,11 @@
 			"path": "."
 		},
 		{
-			"name": "游戏设计创意库",
-			"path": "../../../../Documents/CoreFiles/ProjectsFile/Creation/游戏设计创意库"
-		},
-		{
-			"name": "EvolutionSystemGame_idea",
-			"path": "../../../../Documents/CoreFiles/ProjectsFile/Career/GameDesign/EvolutionSystemGame_idea"
-		},
-		{
 			"name": "ComplexAgentsSystem",
 			"path": "../../../../Documents/CoreFiles/ResearchFile/ComplexAgentsSystem"
+		},
+		{
+			"path": "../../../../Documents/CoreFiles/ProjectsFile/Creation/GameIdeas"
 		}
 	],
 	"settings": {
