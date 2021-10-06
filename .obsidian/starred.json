@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "复杂多主体博弈游戏考虑的控制项",
+      "path": "Analysis/复杂多主体博弈游戏考虑的控制项.md"
+    },
+    {
+      "type": "file",
+      "title": "复杂多主体博弈游戏枚举",
+      "path": "Analysis/复杂多主体博弈游戏枚举.md"
+    },
+    {
+      "type": "file",
+      "title": "各种益智游戏枚举",
+      "path": "Analysis/各种益智游戏枚举.md"
+    },
+    {
+      "type": "file",
+      "title": "分析ComplexAgentsGame",
+      "path": "Analysis/分析ComplexAgentsGame.md"
+    }
+  ]
+}
